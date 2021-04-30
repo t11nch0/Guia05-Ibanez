@@ -11,6 +11,9 @@ public class Herramienta extends Contrato{
         this.nombreHerramienta= null;
         this.costoPorDiaHerramienta= null;
     }
+    public Herramienta(String nombreHerramienta){
+        this.nombreHerramienta= nombreHerramienta;
+    }
 
     public Herramienta(String nombreHerramienta, Double costoPorDiaHerramienta){
         this.nombreHerramienta= nombreHerramienta;

@@ -1,11 +1,11 @@
 package Guia05;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 public class Contrato implements Usuario{
 
-    public Collection<Contrato> contratos= new ArrayList<>();
+    public List<Contrato> contratos= new ArrayList<>();
 
     public void contratarAlquiler(Herramienta herramienta) throws AlquilerNoEntregadoException{
 
@@ -19,11 +19,18 @@ public class Contrato implements Usuario{
         }
     }
 
-    public Collection<Contrato> getContratos() {
+    public void devolverAlquiler(List<Contrato> contrato){
+        for(Contrato c: contratos){
+            if(c.equals(contrato))
+                this.contratos.remove(c.contratos);
+        }
+    }
+
+    public List<Contrato> getContratos() {
         return this.contratos;
     }
 
-    public Boolean muchosAlquileres(Collection<Contrato> contratos){
+    public Boolean muchosAlquileres(List<Contrato> contratos){
         int aux= 0;
         for(Contrato c : contratos){
             if(c instanceof Alquiler)

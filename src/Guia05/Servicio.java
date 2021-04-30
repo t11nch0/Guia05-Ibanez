@@ -1,5 +1,7 @@
 package Guia05;
 
-public class Servicio {
+public abstract class Servicio extends Contrato{
+    protected Double costoBase;
+    protected Boolean estadoUrgente;
 }
 

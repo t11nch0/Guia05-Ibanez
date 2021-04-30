@@ -1,9 +1,10 @@
 package Guia05;
 
-import java.util.Collection;
+import java.util.List;
 
 public interface Usuario{
     public void contratarAlquiler(Herramienta herramienta) throws AlquilerNoEntregadoException;
-    public Collection<Contrato> getContratos();
+    public void devolverAlquiler(List<Contrato> contrato);
+    public List<Contrato> getContratos();
 
 }
